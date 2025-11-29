@@ -27,10 +27,6 @@ Este proyecto se centra en la habilidad para construir y consultar un modelo de 
 * **Conexión:** Conexión directa a la base de datos `Pizza_DB`.
 * **Modelado:** Configuración manual de las relaciones en el entorno de BI.
 * **Visualización de KPIs:** Dashboard de una sola página con enfoque en **Horas Pico** (para gestión de personal) y **Ticket Promedio** (para rentabilidad).
-
-### 3. Excel
-* **Quick Audit:** Uso de Tablas Dinámicas o filtros para auditoría rápida de las ventas y los ingredientes.
-
 ---
 
 ## 📊 Hallazgos Clave (Key Insights)
