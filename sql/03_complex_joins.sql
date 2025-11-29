@@ -3,7 +3,7 @@
 -- ==============================================================
 
 -- ==============================================================
--- SECCI”N 1: KPIs GLOBALES (Indicadores Clave de DesempeÒo)
+-- SECCI√ìN 1: KPIs GLOBALES (Indicadores Clave de Desempe√±o)
 -- ==============================================================
 
 -- 1.1. Resumen Ejecutivo
@@ -19,10 +19,10 @@ JOIN orders o ON od.order_id = o.order_id;
 
 
 -- ==============================================================
--- SECCI”N 2: AN¡LISIS DE PRODUCTO Y MEN⁄
+-- SECCI√ìN 2: AN√ÅLISIS DE PRODUCTO Y MEN√ö
 -- ==============================================================
 
--- 2.1. Las 5 Pizzas M·s Vendidas (Revenue Generators)
+-- 2.1. Las 5 Pizzas M√°s Vendidas (Revenue Generators)
 SELECT TOP 5
     pt.name AS Nombre_Pizza,
     pt.category AS Categoria,
@@ -34,7 +34,7 @@ JOIN pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
 GROUP BY pt.name, pt.category
 ORDER BY SUM(od.quantity * p.price) DESC;
 
--- 2.2. Las 5 Pizzas MENOS Vendidas (Candidatas a eliminar del men˙)
+-- 2.2. Las 5 Pizzas MENOS Vendidas (Candidatas a eliminar del men√∫)
 SELECT TOP 5
     pt.name AS Nombre_Pizza,
     pt.category,
@@ -46,7 +46,7 @@ JOIN pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
 GROUP BY pt.name, pt.category
 ORDER BY Cantidad_Vendida ASC;
 
--- 2.3. Preferencia de TamaÒo por CategorÌa (øLa gente pide Veggie grande o chica?)
+-- 2.3. Preferencia de Tama√±o por Categor√≠a (¬øLa gente pide Veggie grande o chica?)
 SELECT 
     pt.category,
     p.size,
@@ -60,11 +60,11 @@ ORDER BY pt.category, p.size;
 
 
 -- ==============================================================
--- SECCI”N 3: AN¡LISIS TEMPORAL (Tendencias)
+-- SECCI√ìN 3: AN√ÅLISIS TEMPORAL (Tendencias)
 -- ==============================================================
 
--- 3.1. DÌas m·s ocupados de la semana
--- ⁄til para planificar turnos de empleados
+-- 3.1. D√≠as m√°s ocupados de la semana
+-- √ötil para planificar turnos de empleados
 SELECT 
     DATENAME(WEEKDAY, o.date) AS Dia_Semana,
     COUNT(DISTINCT o.order_id) AS Total_Ordenes,
@@ -86,11 +86,11 @@ ORDER BY Total_Ordenes DESC;
 
 
 -- ==============================================================
--- SECCI”N 4: ADVANCED ANALYTICS (Window Functions & CTEs)
+-- SECCI√ìN 4: ADVANCED ANALYTICS (Window Functions & CTEs)
 -- ==============================================================
 
--- 4.1. Ingresos Acumulados por DÌa (Running Total)
--- Muestra cÛmo crece el dinero dÌa a dÌa. Demuestra uso de CTE y Window Functions.
+-- 4.1. Ingresos Acumulados por D√≠a (Running Total)
+-- Muestra c√≥mo crece el dinero d√≠a a d√≠a. Demuestra uso de CTE y Window Functions.
 WITH VentasDiarias AS (
     SELECT 
         o.date,
@@ -107,8 +107,8 @@ SELECT
 FROM VentasDiarias
 ORDER BY date;
 
--- 4.2. Ranking de Pizzas dentro de cada CategorÌa
--- øCu·l es la #1 de Pollo? øCu·l es la #1 Vegetariana?
+-- 4.2. Ranking de Pizzas dentro de cada Categor√≠a
+-- ¬øCu√°l es la #1 de Pollo? ¬øCu√°l es la #1 Vegetariana?
 SELECT 
     Categoria,
     Nombre_Pizza,
@@ -119,12 +119,12 @@ FROM (
         pt.category AS Categoria,
         pt.name AS Nombre_Pizza,
         SUM(od.quantity * p.price) AS Ingresos,
-        -- RANK() crea un ranking reiniciando el conteo para cada categorÌa
+        -- RANK() crea un ranking reiniciando el conteo para cada categor√≠a
         RANK() OVER (PARTITION BY pt.category ORDER BY SUM(od.quantity * p.price) DESC) AS Ranking_Categoria
     FROM order_details od
     JOIN pizzas p ON od.pizza_id = p.pizza_id
     JOIN pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
     GROUP BY pt.category, pt.name
 ) AS RankingTable
-WHERE Ranking_Categoria <= 3 -- Mostrar solo el Top 3 de cada categorÌa
+WHERE Ranking_Categoria <= 3 -- Mostrar solo el Top 3 de cada categor√≠a
 ORDER BY Categoria, Ranking_Categoria;
