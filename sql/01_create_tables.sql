@@ -5,7 +5,7 @@ CREATE TABLE orders (
     time TIME
 );
 
--- 2. Tabla: TIPOS DE PIZZA (Cat·logo)
+-- 2. Tabla: TIPOS DE PIZZA (Cat√°logo)
 CREATE TABLE pizza_types (
     pizza_type_id VARCHAR(50) PRIMARY KEY,
     name VARCHAR(100),
@@ -13,7 +13,7 @@ CREATE TABLE pizza_types (
     ingredients VARCHAR(MAX)
 );
 
--- 3. Tabla: PIZZAS (Precios y TamaÒos)
+-- 3. Tabla: PIZZAS (Precios y Tama√±os)
 -- Esta depende de pizza_types
 CREATE TABLE pizzas (
     pizza_id VARCHAR(50) PRIMARY KEY,
