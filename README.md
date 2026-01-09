@@ -42,7 +42,7 @@ Este proyecto se centra en la habilidad para construir y consultar un modelo de 
 
 ```text
 Pizza_Sales_Relational_Analysis/
-├── data/                  # 4 Archivos CSV originales (orders, pizzas, etc.)
-├── sql/                   # 01_create_tables.sql, 02_import_data.sql, 03_complex_joins.sql
-├── powerbi/               # Archivo .pbix del Dashboard
+├── data/                  # Datasets originales (CSV)
+├── sql/                   # Scripts SQL (Schema, ETL, Queries)
+├── powerbi/               # Dashboard (.pbix)
 └── README.md              # Documentación del proyecto
