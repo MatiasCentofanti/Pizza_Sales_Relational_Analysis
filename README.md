@@ -23,7 +23,7 @@ Este proyecto se centra en la habilidad para construir y consultar un modelo de 
 * **Objetivo:** Demostrar el manejo de un modelo de datos normalizado (Star/Snowflake Schema).
 * **Modelado:** Creación de 4 tablas interconectadas (`orders`, `order_details`, `pizzas`, `pizza_types`) con `PRIMARY KEY` y `FOREIGN KEY` (PK/FK).
 * **ETL & Data Cleansing:** Desarrollo de un script de migración que soluciona errores de formato numérico (`1275` → `12.75`) causados por la inconsistencia de los datos fuente.
-* **Análisis Avanzado:** Uso extensivo de **`INNER JOIN`** (3 y 4 tablas) para calcular Ingresos por Categoría y **`WINDOW FUNCTIONS`** (`RANK`, `SUM() OVER`) para calcular las ventas acumuladas.
+* **Análisis:** Uso extensivo de **`INNER JOIN`** (3 y 4 tablas) para calcular Ingresos por Categoría y **`WINDOW FUNCTIONS`** (`RANK`, `SUM() OVER`) para calcular las ventas acumuladas.
 
 ### 2. Power BI
 * **Conexión:** Conexión directa a la base de datos `Pizza_DB`.
