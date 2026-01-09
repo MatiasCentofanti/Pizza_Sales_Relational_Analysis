@@ -25,7 +25,7 @@ Este proyecto se centra en la habilidad para construir y consultar un modelo de 
 * **ETL & Data Cleansing:** Desarrollo de un script de migración que soluciona errores de formato numérico (`1275` → `12.75`) causados por la inconsistencia de los datos fuente.
 * **Análisis:** Uso extensivo de **`INNER JOIN`** (3 y 4 tablas) para calcular Ingresos por Categoría y **`WINDOW FUNCTIONS`** (`RANK`, `SUM() OVER`) para calcular las ventas acumuladas.
 
-### 2. Power BI
+### 2. Power BI (Business Intelligence)
 * **Conexión:** Conexión directa a la base de datos `Pizza_DB`.
 * **Modelado:** Configuración manual de las relaciones en el entorno de BI.
 * **Visualización de KPIs:** Dashboard de una sola página con enfoque en **Horas Pico** (para gestión de personal) y **Ticket Promedio** (para rentabilidad).
