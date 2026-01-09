@@ -4,7 +4,7 @@
 ![Power Bi](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
 ![Dashboard Preview](dashboard_review.png)
-*(Vista previa del Dashboard de Ventas y Operaciones)*
+*(Vista previa del Dashboard)*
 
 ## 📌 Resumen del Proyecto
 Este proyecto se enfoca en el **Análisis de un Modelo de Datos Normalizado**. El objetivo principal es evaluar el rendimiento del menú y la eficiencia operativa de un restaurante de pizzas, utilizando consultas complejas para unir datos de múltiples tablas.
