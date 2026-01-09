@@ -32,9 +32,9 @@ Este proyecto se centra en la habilidad para construir y consultar un modelo de 
 ## 📊 Hallazgos Clave (Key Insights)
 
 1.  **Ventas Totales:** La Categoría **Clásica** (Classic) es la que genera la mayor cantidad de ingresos, aunque la categoría **Supreme** tiene un Ticket Promedio más alto.
-2.  **Operaciones:** El día más ocupado es el **[Aquí pones el día que salió en la consulta #3.1]**, y la hora pico de pedidos se concentra entre las **[Aquí pones la Hora que salió en la consulta #3.2]** y **[Aquí pones la siguiente hora]**.
+2.  **Operaciones:** La hora pico de pedidos se concentra entre las **5:00 pm** y **9:00 pm**.
     * *Recomendación:* Se requiere aumentar el personal de cocina y reparto en ese rango horario.
-3.  **Rentabilidad:** La pizza **[Poner la pizza #1 del query 2.1]** es la que impulsa los ingresos del restaurante.
+3.  **Rentabilidad:** La pizza **The Barbecue Chicken Pizza** es la que impulsa los ingresos del restaurante.
 
 ---
 
