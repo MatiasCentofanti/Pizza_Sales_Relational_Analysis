@@ -7,7 +7,9 @@
 *(Vista previa del Dashboard)*
 
 ## 📌 Resumen del Proyecto
-Este proyecto se enfoca en el **Análisis de un Modelo de Datos Normalizado**. El objetivo principal es evaluar el rendimiento del menú y la eficiencia operativa de un restaurante de pizzas, utilizando consultas complejas para unir datos de múltiples tablas.
+Este proyecto se enfoca en el **Análisis de un Modelo de Datos Normalizado**. 
+
+El objetivo principal es evaluar el rendimiento del menú y la eficiencia operativa de un restaurante de pizzas, utilizando consultas complejas para unir datos de múltiples tablas.
 
 **Pregunta de Negocio:** ¿Cuál es la composición de la venta (Categoría, Tamaño), cuál es el mejor momento para contratar personal y qué productos maximizan los ingresos?
 
